@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/cb98b58c1f.js" crossorigin="anonymous"></script>
+  <title>Todo List</title>
+</head>
+
+<body>
+  <div class="app">
+    <div class="header">
+      <div class="headerTitle">
+        <span>To Do List</span>
+      </div>
+      <div class="headerIcons">
+        <button id="createTask">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <button id="refreshTask">
+          <i class="fa-solid fa-repeat"></i>
+        </button>
+      </div>
+    </div>
+    <div class="tasks">
+      <div class="scroll">
+        <div class="task">
+          <div class="flag">
+            <input type="checkbox" />
+          </div>
+          <div class="taskText">
+            <div class="taskTitle">Yapılacak iş buraya yazılacak.</div>
+            <div class="taskDescription">Bu alana açıklama yazılacak</div>
+          </div>
+          <div class="taskIcons">
+            <button>
+              <i class="fa-solid fa-pen"></i>
+            </button>
+            <button>
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal">
+    <div class="closeButton">
+      <button><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="modalText">
+      <label for="">Title:</label>
+      <input type="text" id="title" class="input" name="title" value=""/>
+      <label for="">Description:</label>
+      <input type="text" id="description" class="input" value=""/>
+    </div>
+    <div class="radio">
+      <input type="radio" id="radio1" name="color" value="Red" class="radioButton" />
+      <label for="Red">1. Priority</label><br />
+      <input type="radio" id="radio2" name="color" value="Orange" class="radioButton" />
+      <label for="Orange">2. Priority</label><br />
+      <input type="radio" id="radio3" name="color" value="Blue" class="radioButton" />
+      <label for="Blue">3. Priority</label><br />
+      <input type="radio" id="radio4" name="color" value="None" class="radioButton" checked/>
+      <label for="None">4. Priority</label><br />
+    </div>
+    <div class="sendButton">
+      <button id="save">Save</button>
+    </div>
+  </div>
+  <div class="deleteModal" id="deleteConfirm">
+    <div class="closeButton" id="deleteModalClose">
+      <button><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="deleteModalText">
+      <span>Are u sure to delete the task?</span>
+    </div>
+    <div class="deleteButtons">
+      <button class="yes" id="deletetask">Yes</button>
+      <button class="no" id="nodelete">No</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
